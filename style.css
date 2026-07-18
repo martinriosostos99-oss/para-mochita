@@ -1,0 +1,657 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+color:white;
+
+background:linear-gradient(-45deg,
+#ffb46d,
+#ff7b91,
+#865DFF,
+#0a1035);
+
+background-size:400% 400%;
+
+animation:sky 18s ease infinite;
+
+}
+
+/* ===========================
+FONDO ANIMADO
+=========================== */
+
+@keyframes sky{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* ===========================
+LOADER
+=========================== */
+
+#loader{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:#000;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+z-index:99999;
+
+transition:1s;
+
+}
+
+#loader h1{
+
+font-size:70px;
+
+font-family:'Great Vibes',cursive;
+
+margin-bottom:20px;
+
+}
+
+#loader p{
+
+opacity:.8;
+
+letter-spacing:2px;
+
+}
+
+/* ===========================
+PORTADA
+=========================== */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+text-align:center;
+
+padding:40px;
+
+}
+
+.overlay{
+
+position:absolute;
+
+inset:0;
+
+background:rgba(0,0,0,.25);
+
+backdrop-filter:blur(2px);
+
+}
+
+.contenido{
+
+position:relative;
+
+z-index:5;
+
+max-width:900px;
+
+}
+
+.hero h3{
+
+font-size:25px;
+
+font-weight:300;
+
+margin-bottom:20px;
+
+}
+
+.hero h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:110px;
+
+margin-bottom:25px;
+
+text-shadow:0 0 30px rgba(255,255,255,.4);
+
+}
+
+.hero p{
+
+font-size:22px;
+
+line-height:1.8;
+
+margin-bottom:45px;
+
+}
+
+/* ===========================
+BOTÓN
+=========================== */
+
+button{
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:60px;
+
+font-size:20px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+background:white;
+
+color:#ff4f8b;
+
+transition:.4s;
+
+box-shadow:0 15px 40px rgba(0,0,0,.3);
+
+}
+
+button:hover{
+
+transform:translateY(-6px) scale(1.05);
+
+box-shadow:0 20px 50px rgba(0,0,0,.4);
+
+}
+
+/* ===========================
+SECCIONES
+=========================== */
+
+section{
+
+padding:100px 8%;
+
+}
+
+section h2{
+
+text-align:center;
+
+font-size:50px;
+
+margin-bottom:60px;
+
+font-family:'Great Vibes',cursive;
+
+}
+/*==========================
+TIMELINE
+==========================*/
+
+.timeline{
+
+max-width:1100px;
+
+margin:auto;
+
+}
+
+.item{
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(18px);
+
+padding:35px;
+
+border-radius:25px;
+
+margin-bottom:35px;
+
+border:1px solid rgba(255,255,255,.15);
+
+transition:.4s;
+
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.item:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.item span{
+
+display:block;
+
+font-size:26px;
+
+font-weight:bold;
+
+margin-bottom:15px;
+
+color:#ffd6e7;
+
+}
+
+.item p{
+
+font-size:19px;
+
+line-height:1.8;
+
+}
+
+/*==========================
+CARDS
+==========================*/
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+.card{
+
+padding:30px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(18px);
+
+text-align:center;
+
+font-size:19px;
+
+transition:.4s;
+
+cursor:pointer;
+
+border:1px solid rgba(255,255,255,.12);
+
+}
+
+.card:hover{
+
+transform:scale(1.05) rotate(-1deg);
+
+background:rgba(255,255,255,.18);
+
+}
+
+/*==========================
+GALERÍA
+==========================*/
+
+.imagenes{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:25px;
+
+}
+
+.imagenes img{
+
+width:100%;
+
+height:350px;
+
+object-fit:cover;
+
+border-radius:25px;
+
+cursor:pointer;
+
+transition:.5s;
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.imagenes img:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 20px 45px rgba(0,0,0,.45);
+
+}
+
+/*==========================
+CONTADOR
+==========================*/
+
+#contador{
+
+text-align:center;
+
+}
+
+#tiempo{
+
+font-size:45px;
+
+font-weight:bold;
+
+line-height:1.8;
+
+margin-top:30px;
+
+}
+
+/*==========================
+PROMESA
+==========================*/
+
+.promesa{
+
+text-align:center;
+
+}
+
+.promesa h2{
+
+font-size:65px;
+
+line-height:1.7;
+
+}
+
+/*==========================
+FINAL
+==========================*/
+
+.final{
+
+text-align:center;
+
+padding-bottom:150px;
+
+}
+
+.final h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:100px;
+
+margin-bottom:25px;
+
+}
+
+.final p{
+
+font-size:28px;
+
+line-height:2;
+
+margin-bottom:40px;
+
+}
+
+#caja{
+
+display:none;
+
+margin-top:40px;
+
+padding:35px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+max-width:700px;
+
+margin-left:auto;
+
+margin-right:auto;
+
+}
+/*==========================
+CORAZONES
+==========================*/
+
+.heart{
+
+position:fixed;
+
+bottom:-50px;
+
+color:#ff4d8d;
+
+pointer-events:none;
+
+animation:subir linear forwards;
+
+z-index:2;
+
+}
+
+@keyframes subir{
+
+0%{
+
+transform:translateY(0) scale(.8);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh) scale(1.4);
+
+opacity:0;
+
+}
+
+}
+
+/*==========================
+ESTRELLAS
+==========================*/
+
+.star{
+
+position:fixed;
+
+width:3px;
+
+height:3px;
+
+background:white;
+
+border-radius:50%;
+
+animation:brillar 2s infinite;
+
+opacity:.8;
+
+}
+
+@keyframes brillar{
+
+0%{opacity:.2;}
+
+50%{opacity:1;}
+
+100%{opacity:.2;}
+
+}
+
+/*==========================
+SCROLL
+==========================*/
+
+.oculto{
+
+opacity:0;
+
+transform:translateY(80px);
+
+transition:1s;
+
+}
+
+.visible{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/*==========================
+MÓVIL
+==========================*/
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:70px;
+
+}
+
+.hero h3{
+
+font-size:20px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+section{
+
+padding:70px 25px;
+
+}
+
+section h2{
+
+font-size:38px;
+
+}
+
+.final h1{
+
+font-size:70px;
+
+}
+
+.final p{
+
+font-size:22px;
+
+}
+
+#tiempo{
+
+font-size:30px;
+
+}
+
+.promesa h2{
+
+font-size:40px;
+
+}
+
+.imagenes{
+
+grid-template-columns:1fr;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/*==========================
+EFECTO CRISTAL
+==========================*/
+
+.glass{
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+border-radius:25px;
+
+}
